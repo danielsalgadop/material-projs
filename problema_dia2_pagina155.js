@@ -1,5 +1,3 @@
-
-
 // objeto funcionando
 //var PersonaNOesLoquePiden  = function(){
 //}
@@ -7,29 +5,24 @@
 // FIN DE objeto funcionando
 
 var Class = function (){};
-
 Class.extend = function(prop) {
 	//return true;
 	//console.log(prop.arguments);
 	for(var key in prop){
-		console.log("toe"+key);
+		//console.log("toe"+key);
 		Klass.prototype[key] = prop[key];
 	}
 	
-	//for(i=0;i<8;i++){
-		
-	//}
-	//console.log("pasas por aqui2");
 	var _super = this.prototype;
-	//console.log(_super);
+	
 	function Klass() {
 		
 	}
-	//Klass = "debe ser un constructor";
+	
 	return Klass;
 };
 
-//
+
 var Persona = Class.extend({
 	init:function(nombre){
 		this.nombre = nombre;
