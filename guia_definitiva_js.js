@@ -319,8 +319,8 @@ console.log(primitiveBoolean1.toString(), primitiveBoolean2.toString()); // logs
  * This will throw an error and not show up in firebug lite, as null and undefined do not
  * convert to objects and do not have constructors. 
  */
-console.log(myNull.toString());
-console.log(myUndefined.toString());
+//console.log(myNull.toString());
+//console.log(myUndefined.toString());
 
 
 /**
@@ -805,7 +805,7 @@ var myObject = {foo: 'value'};
 console.log(myObject.hasOwnProperty('foo')) // logs true
 
 // vs. a property from the prototype chain
-console.log(myObject.hasOwnProperty('toString'); // logs false
+console.log(myObject.hasOwnProperty('toString')); // logs false
 
 
 /**
