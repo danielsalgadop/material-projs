@@ -10,11 +10,29 @@ for(var i =100000;i--;){
 
 console.log(counter);
 
+// jugeteando con setTimeout(function, milliseconds);
+var timerId = setTimeout(function(){
+	console.log("primero => terceror");
+}, 1000);
+
+// clearTimeout(timerId);
+
+console.log("medio => primero");
+
+setTimeout(function(){
+	console.log("final => segundo");
+}, 1);
+
+
+
+
 function debounce(fn, intervalo){
 // function throttle(fn, intervalo){
 	// console.log("intervalo es "+intervalo);
 	var lastCall = 0;   // solo se inicializa una vez
 	return function(){
+
+
 		var now = Date.now();   // se inicializa en cada llamada inc() dentro de for(var i=10000;i--)
 		if(now > (lastCall + intervalo)){
 			// puedes ejecutar la funcion
