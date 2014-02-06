@@ -1,7 +1,7 @@
 var counter = 0;
 inc = function() {counter++;}
 
-inc = throttle(inc, 10);
+inc = debounce(inc, 1000);
 // inc = throttle(inc,10);
 
 for(var i =100000;i--;){
@@ -10,7 +10,7 @@ for(var i =100000;i--;){
 
 console.log(counter);
 
-function throttle(fn, intervalo){
+function debounce(fn, intervalo){
 // function throttle(fn, intervalo){
 	// console.log("intervalo es "+intervalo);
 	var lastCall = 0;   // solo se inicializa una vez
