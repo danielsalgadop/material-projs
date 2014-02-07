@@ -27,38 +27,3 @@ console.log(objeto_con_propiedades.prop1);  // ¿por que no sale la propiedad? /
 
 // ObejetoSimple.prototype.comer = console.log("Mmmm..");
 // ObejetoSimple.prototype.comer = console.log("Mmmm..");
-
-var strset = {
-	hola: true,
-	adios: true
-};
-if("hola" in strset){
-	console.log("entuentro hola en strset");
-}else{
-	console.log("NO lo encuentro");
-}
-
-
-
-var obj1 = {
-	prop1: "valor1"
-}
-
-// Los objetos se copia POR REFERENCIA
-obj2 = obj1;
-obj2.prop1 = "nuevo_valor1";
-console.log(obj1.prop1);  // "nuevo_valor1" El cambio de valor hecho en obj2 cambia obj1 (mismo slot de memoria (referencia))
-// le añado una funcion
-
-obj1.fun_anyadida = function(){ console.log("has llamado a fun_anyadida")};
-
-obj1.fun_anyadida();  // llamando a la funcion recien anyadida  
-
-// console.log(obj1); // { prop1: 'nuevo_valor1', fun_anyadida: [Function] }
-
-(function(){console.log("funcion auto ejecutable, mola")})();  // Funncion autoejecutable, no requiere que la llames.   (function(){codigo})());
-
-(function (obj) {
-return {b: 2};
-})({a: 1});
-

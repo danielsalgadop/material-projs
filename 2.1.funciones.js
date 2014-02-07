@@ -60,3 +60,10 @@ function makeContador(){
 // contador1();
 // contador1();
 // contador1();
+
+
+
+(function (obj) {
+return {b: 2};
+})({a: 1});
+
