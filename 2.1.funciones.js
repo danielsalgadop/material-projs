@@ -7,17 +7,36 @@ function funcionDevuelve1(){
 	// console.log("funcionDevuelve1");
 	return 1;
 }
-console.log("funcionDevuelve1()["+funcionDevuelve1+"]");
-var r_funcionDevuelve1 = funcionDevuelve1();
-r_funcionDevuelve1;
+
+//
+var toe = funcionDevuelve1;
+console.log(""+toe()+"");  // 1
+console.log(toe());			// 1
+
+console.log(""+toe+"");		// <<<<<<< CURIOSO LO QUE SALE (salen hasta comentarios) function funcionDevuelve1(){// console.log("funcionDevuelve1");return 1;}
+console.log(toe);			// [Function: funcionDevuelve1]
 
 
-// function funcionDevuelveFuncion(){
-// 	// console.log("funcionDevuelveFuncion");
-// 	return 1;
-// }
-// console.log("funcionDevuelveFuncion()["+funcionDevuelveFuncion+"]");
-// var r_funcionDevuelveFuncion = funcionDevuelve1();
+
+function funcionDevuelveFuncion(){
+	var unafuncion = function(){};
+	return unafuncion;
+}
+console.log(funcionDevuelveFuncion);
+console.log(funcionDevuelveFuncion());
+var r_funcionDevuelveFuncion = funcionDevuelveFuncion();
+funcionDevuelveFuncion();
+
+
+
+
+// console.log(funcionDevuelve1());
+// console.log(funcionDevuelve1);
+
+// console.log("funcionDevuelve1()["+funcionDevuelve1+"]");
+// var r_funcionDevuelve1 = funcionDevuelve1();
+// r_funcionDevuelve1;
+
 
 
 // (funcionMasSimple({console.log("funcionMasSimple");}))();
@@ -34,10 +53,10 @@ function makeContador(){
 		}
 	}
 
-var contador1 = makeContador();
-console.log(contador1);  // [Function]
-console.log(contador1());  // []
-contador1();
-contador1();
-contador1();
-contador1();
+// var contador1 = makeContador();
+// console.log(contador1);  // [Function]
+// console.log(contador1());  // []
+// contador1();
+// contador1();
+// contador1();
+// contador1();
