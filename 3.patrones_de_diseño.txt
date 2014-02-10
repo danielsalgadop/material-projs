@@ -1,0 +1,10 @@
+En las diapos hay más pattrones de las q vamos a ver.
+
+Princiipios de diseño:
+el primer mandamiento.  SRP -> el código tiene que hacer una unica cosa.
+Que cada responsaibilidad tenga ha de tener un uno lugar en el cóodigo.
+
+El código es dificil de leer cuando el QUE hace esta separado del COMO lo esta haciendo
+
+masonry.js ejemplo de codigo hiper chungo
+browserQues ejemplo de codigo GUAY lo hicieron los de mozilla
