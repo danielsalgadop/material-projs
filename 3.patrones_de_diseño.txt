@@ -8,3 +8,18 @@ El código es dificil de leer cuando el QUE hace esta separado del COMO lo esta 
 
 masonry.js ejemplo de codigo hiper chungo
 browserQues ejemplo de codigo GUAY lo hicieron los de mozilla
+
+
+
+Otro principio "Tell Dont Ask".
+Dime lo q necesitas.
+
+O le mandas una orden o le preguntas por un
+Comand / Query separation
+
+
+S.O.L.I.D
+
+S - Single REsponsibility
+O- Open - Closed
+L - Liskov
