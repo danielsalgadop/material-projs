@@ -73,3 +73,6 @@ function makeContador(){
 return {b: 2};
 })({a: 1});
 
+
+
+// Cuando devuelves una funcion devuelves tb el AMBIENTE EN EL Q SE CREO

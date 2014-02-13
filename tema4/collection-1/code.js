@@ -30,6 +30,33 @@ var Producto = ProJS.Model.extend({
 // Colección
 
 var ListadoProductos = ProJS.Collection.extend({
-  model: Producto
+  model: Producto,
+  url:"/products",
   // Tu código aquí!
+  listado: function(){
+      var datos_listado = new Array();
+      
+      var array_hashes = this.fetch();
+      console.log(this.length);
+      for (var i = this.length - 1; i >= 0; i--) {
+        console.log(this.at(i).get("nombre"));
+        console.log("nombre");
+        // console.log(this[i].nombre);
+      };
+      // var array_hashes = this.get();
+      // console.log(array_hashes);
+  }
 });
+
+listado_productos = new ListadoProductos();
+listado_productos.listado();
+
+
+
+
+
+
+
+
+
+

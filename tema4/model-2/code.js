@@ -58,4 +58,38 @@ var ProductoConIva = ProJS.Class.extend({
 });
 
 // Tu código aquí!
+  var arrayProductos = new Array();
+var id_existe;
+$.get("/products",function(response) {
+  // console.log(response);
+  for (var i = response.length - 1; i >= 0; i--) {
+      // console.log(response[i].id);
+      producto = new Producto({id:response[i].id , nombre:response[i].nombre});
+      arrayProductos.push(producto);
 
+      id_existe = producto.id;
+     };
+
+})
+
+// console.log(arrayProductos);
+
+// Modificar algun modelo
+// console.log(id_existe);
+primer_producto = arrayProductos[0];
+console.log("antes nombre"+primer_producto.get("nombre"));
+
+primer_producto.set({nombre: "anterior ["+primer_producto.get("nombre")+"] nombre Mucho mejor,dnd va a parar"});   // <<<< una llamada a SET dentro del GET !!! y funciona
+console.log("Despues nombre"+primer_producto.get("nombre"));
+
+
+function haceAlgoConPrimerObjeto(){
+
+}
+
+
+
+
+// RECOMENDACION, QUE LAS COLECCIONES TENGAN SIEMPRE EL MISMO TIPO DE MODELO
+
+// en vez de usar arrays como anterior , lo hariamos con colecciones
